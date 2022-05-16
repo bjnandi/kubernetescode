@@ -8,18 +8,7 @@ node {
         checkout scm
     }
 
-    stage('Build image') {
-  
-       app = docker.build("bjnandi/test")
-    }
 
-    stage('Test image') {
-  
-
-        app.inside {
-            sh 'echo "Tests passed"'
-        }
-    }
 
 
 }
